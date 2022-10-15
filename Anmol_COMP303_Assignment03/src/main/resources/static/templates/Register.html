@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<!-- KokilaSangilimuthu -301151291-21/07/2022 -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	
+<title>Register</title>
+</head>
+<body>
+<div class="container">
+		<form action="#" th:action=@{/addCustomer} th:object="${customer}" method="post">  
+        	<h1 class="text-center">Register</h1></br>
+        	<!-- Add hidden form field to handle update -->
+           
+        	<div class="row">
+        	<div class="col-md-4"></div>
+        	<div class="col-md-4">
+        		<table>  
+                <tr>  
+                    <td><label>Customer ID</label></td>  
+                    <td><input type="number" min="1" name="customerId" class="form-control" required></input></td>  
+                </tr>
+                <tr>  
+                    <td><label>username</label></td> 
+                 	<td>
+						<input type="text" name="userName" class="form-control" required></input></td>     
+                </tr>  
+                <tr>  
+                    <td><label>password</label></td> 
+                 	<td>
+						<input type="text" name="password" class="form-control" required></input></td>     
+                </tr>  
+                <tr>  
+                    <td><label>first name</label></td> 
+                 	<td>
+						<input type="text" name="firstName" class="form-control" required></input></td>     
+                </tr> 
+                <tr>  
+                    <td><label>Last name</label></td> 
+                 	<td>
+						<input type="text" name="lastName" class="form-control" required></input></td>     
+                </tr> 
+                <tr>  
+                    <td><label>Address</label></td> 
+                 	<td>
+						<input type="text" name="address" class="form-control" required></input></td>     
+                </tr> 
+                <tr>  
+                    <td><label>City</label></td> 
+                 	<td>
+						<input type="text" name="city" class="form-control" required></input></td>     
+                </tr> 
+                <tr>  
+                    <td><label>Postal Code</label></td> 
+                 	<td>
+						<input type="text" name="postalCode" class="form-control" required></input></td>     
+                </tr> 
+                <tr>  
+                    <td><label>Phone no</label></td> 
+                 	<td>
+						<input type="text" name="phone" class="form-control" required></input></td>     
+                </tr> 
+                <tr>  
+                    <td><label>email Id</label></td> 
+                 	<td>
+						<input type="text" name="emailId" class="form-control" required></input></td>     
+                </tr> 
+                <tr>  
+                    <td></td>
+                    <td><input type="submit" value="Register" class="btn btn-primary" style="width:215px"></input></td>  
+                </tr>  
+            </table>
+        	</div>
+        	<div class="col-md-4"></div>
+           </div>  
+      </form>  
+	</div>	
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<!-- KokilaSangilimuthu -301151291-21/07/2022 -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	
+<title>view-Customer</title>
+</head>
+<body>
+<h1 class="text-center">Customer-detail</h1></br>
+        	<div class="row">
+        	<div class="col-md-4"></div>
+        	<div class="col-md-4">
+        		<table>  
+                <tr>  
+                    <td><label>Customer Id    </label></td>  
+                    <td th:text="${customer.customerId}"></td>  
+                </tr>
+                <tr>  
+                    <td><label>username </label></td> 
+                 	<td th:text="${customer.userName}">
+						</td>     
+                </tr>  
+                <tr>  
+                    <td><label>password </label></td> 
+                 	<td th:text="${customer.password}"></td>     
+                </tr>  
+                <tr>  
+                    <td><label>first name </label></td> 
+                 	<td th:text="${customer.firstName}"></td>    
+                </tr> 
+                <tr>  
+                    <td><label>Last name </label></td> 
+                 	<td th:text="${customer.lastName}"></td>	     
+                </tr> 
+                <tr>  
+                    <td><label>Address </label></td> 
+                 	<td th:text="${customer.address}">
+						<input type="text" name="address" th:value="*{address}" class="form-control" readonly required></input></td>     
+                </tr> 
+                <tr>  
+                    <td><label>City </label></td> 
+                 	<td th:text="${customer.city}"></td>     
+                </tr> 
+                <tr>  
+                    <td><label>Postal Code </label></td> 
+                 	<td th:text="${customer.postalCode}"></td>     
+                </tr> 
+                <tr>  
+                    <td><label>Phone no </label></td> 
+                 	<td th:text="${customer.phone}"></td>     
+                </tr> 
+                <tr>  
+                    <td><label>email Id </label></td> 
+                 	<td th:text="${customer.emailId}"></td>     
+                </tr> 
+                <tr>  
+                    <td></td>  
+                    <td><strong><a a th:href="@{/}" class="btn btn-primary" style="width:200px">Home</a></strong></td>  
+                </tr>  
+            </table>
+        	</div>
+        	<div class="col-md-4"></div>
+           </div>  
+        
+</body>
+</html>

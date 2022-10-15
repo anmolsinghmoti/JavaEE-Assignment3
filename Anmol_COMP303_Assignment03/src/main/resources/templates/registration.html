@@ -1,0 +1,68 @@
+<!-- AnmolSingh-301145362 -->
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	
+<title>Register</title>
+</head>
+<body>
+<div class="container px-5 my-5">
+	<h1 class="text-center">Register</h1></br>
+    <form id="contactForm"  th:action=@{/addCustomer} th:object="${customer}" method="post">
+        <div class="form-floating mb-3">
+            <input class="form-control" min="1" id="customerId" name="customerId" type="number" placeholder="Customer Id" required />
+            <label for="customerId">Customer Id</label>
+           
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="username" name="userName" type="text" placeholder="Username" required />
+            <label for="username">Username</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="password" name="password" type="password" required  />
+            <label for="password">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="firstName" name="firstName" type="text" placeholder="First Name" required  />
+            <label for="firstName">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="lastName" name="lastName" type="text" placeholder="Last Name" required />
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="address" name="address" type="text" placeholder="Address" required />
+            <label for="address">Address</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="city" name="city" type="text" placeholder="City" required  />
+            <label for="city">City</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="postalCode" name="postalCode" type="text" placeholder="Postal Code" required />
+            <label for="postalCode">Postal Code</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="phoneNumber" name="phone" type="text" placeholder="Phone Number" required  />
+            <label for="phoneNumber">Phone Number</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="emailAddress" name="emailId" type="email" placeholder="Email Address" required  />
+            <label for="emailAddress">Email Address</label>
+
+        </div>
+     
+        <div class="d-grid">
+        <input type="submit" value="Register" class="btn btn-primary" style="width:215px"></input>
+		  <input type="reset" value="Clear" class="btn btn-primary" style="width:215px"></input>
+        </div>
+    </form>
+</div>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>

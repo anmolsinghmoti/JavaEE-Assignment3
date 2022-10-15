@@ -1,0 +1,35 @@
+<!-- AnmolSingh-301145362 -->
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	
+<title>view-Customer</title>
+</head>
+<body>
+<h1 class="text-center">Customer-detail</h1></br>
+   <div class="container">
+        <ul class="list-group">
+ 
+  <li class="list-group-item list-group-item-primary"><label style="margin-right: 10vw;font-weight: bold">Customer Id    </label><label th:text="${customer.customerId}"></label></li>
+  <li class="list-group-item list-group-item-secondary"><label style="margin-right: 10vw; font-weight: bold">username </label><label th:text="${customer.userName}"></label> </li>
+  <li class="list-group-item list-group-item-success"><label style="margin-right: 10vw; font-weight: bold">Password: </label><label th:text="${customer.firstName}"></li>
+  <li class="list-group-item list-group-item-danger"><label style="margin-right: 10vw; font-weight: bold">first Name: </label><td th:text="${customer.password}"></li>
+  <li class="list-group-item list-group-item-warning"><label style="margin-right: 10vw; font-weight: bold">Last Name: </label><label th:text="${customer.lastName}"></label></li>
+  <li class="list-group-item list-group-item-info"> <label style="margin-right: 10vw; font-weight: bold">Address: </label><label th:text="${customer.address}"> <input type="text" name="address" th:value="*{address}" class="form-control" readonly required></input></label></li>
+  <li class="list-group-item list-group-item-light"><label style="margin-right: 10vw; font-weight: bold">City: </label> <label th:text="${customer.city}"> </label></li>
+  <li class="list-group-item list-group-item-dark"><label style="margin-right: 10vw; font-weight: bold">Postal Code: </label><label th:text="${customer.postalCode}"></label></li>
+  
+    <li class="list-group-item list-group-item-primary"><label style="margin-right: 10vw; font-weight: bold">Phone Nunmber: </label><label th:text="${customer.phone}"></label></li>
+  <li class="list-group-item list-group-item-secondary"><label style="margin-right: 10vw; font-weight: bold">Email Id: </label><label th:text="${customer.emailId}"></label> </li>
+
+</ul>
+<strong><a a th:href="@{/listOfCustomers}" class="btn btn-primary" style="width:200px">Customer's List</a></strong>
+   </div>
+</body>
+</html>

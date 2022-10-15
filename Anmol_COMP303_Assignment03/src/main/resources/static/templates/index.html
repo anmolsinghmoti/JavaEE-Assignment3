@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<!-- //KokilaSangilimuthu -301151291-21/07/2022 -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	
+<title>Home</title>
+</head>
+<body>
+<style>
+	.wrapper{
+		margin-top:100px;
+	}
+	.btn{
+		width:100%;
+		padding:10px;
+		margin-top:30px;
+		margin-bottom:40px;
+		font-weight:bold;
+	}
+</style>
+	<div class="container wrapper">
+		<table class="table">
+			<thead class="thead-light">
+				<th><h1 class="text-center">Welcome</h1></br></th>
+			</thead>
+			<tbody>
+				<tr>
+					<td><div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-3">
+							<a th:href="@{/register}" class="btn btn-primary btn-sm mb-3" >Register</a>
+						</div>
+						<div class="col-md-3">
+							<a th:href="@{/list-cust}" class="btn btn-primary btn-sm mb-3" >View Customer list</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+	
+</body>
+</html>

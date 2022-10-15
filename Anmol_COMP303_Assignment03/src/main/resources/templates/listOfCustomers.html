@@ -1,0 +1,41 @@
+<!-- AnmolSingh-301145362 -->
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<title>Customer-list</title>
+</head>
+<body>
+<div class="container">
+		<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Customer Id</th>
+				<th>Customer Name</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr th:each="customer : ${customerList}">
+			<td th:text="${customer.customerId}">Customer Id</td>
+			<td th:text="${customer.firstName}">Customer's First Name</td>
+			<td> <a th:href="@{/update/{id}(id=${customer.customerId})}"
+                class="btn btn-primary">Update</a></td>
+                <td> <a th:href="@{/view/{id}(id=${customer.customerId})}"
+                class="btn btn-info">View</a></td>
+			<td><a th:href="@{/deleteCustomer/{id}(id=${customer.customerId})}"
+                class="btn btn-danger">Delete</a></td>
+		</tr>
+		</tbody>
+		</table>
+    	<strong><a a th:href="@{/}" class="btn btn-primary" style="width:200px">Home</a></strong>
+	</div>
+</body>
+</html>
